@@ -1,0 +1,7 @@
+node_modules/
+db/
+app.json
+lambda/
+test.js
+platforms/alexaSkill/.ask/config
+platforms/alexaSkill/skill.json

@@ -1,0 +1,398 @@
+{
+	"invocation": "bus cinquante huit",
+	"alexa": {
+		"interactionModel": {
+			"prompts": [
+				{
+					"id": "Elicit.Slot.1407313364947.786701536083",
+					"variations": [
+						{
+							"type": "PlainText",
+							"value": "quel arrêt s'il vous plait?"
+						}
+					]
+				}
+			],
+			"dialog": {
+				"intents": [
+					{
+						"name": "HorairesIntent",
+						"confirmationRequired": false,
+						"slots": [
+							{
+								"name": "station",
+								"type": "station",
+								"elicitationRequired": true,
+								"confirmationRequired": false,
+								"prompts": {
+									"elicitation": "Elicit.Slot.1407313364947.786701536083"
+								}
+							}
+						]
+					}
+				]
+			},
+			"languageModel": {
+				"intents": [
+					{
+						"name": "AMAZON.CancelIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.HelpIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.StopIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.PauseIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.ResumeIntent",
+						"samples": []
+					},
+					{
+						"name": "AMAZON.RepeatIntent",
+						"samples": [
+							"donne moi les derniers horaires",
+							"quand arrive le prochain bus",
+							"repète",
+							"encore"
+						]
+					},
+					{
+						"name": "AMAZON.NavigateHomeIntent",
+						"samples": []
+					}
+				]
+			}
+		}
+	},
+	"inputTypes": [
+		{
+			"name": "station",
+			"values": [
+				{
+					"value": "Hopitaux Broussais et Saint-Joseph",
+					"synonyms": [
+						"hopital broussais",
+						"broussais",
+						"Hopitaux Broussais et Saint-Joseph"
+					],
+					"id": "hopitaux+broussais+et+saint+joseph"
+				},
+				{
+					"value": "Pont Neuf - Quai des Grands Augustins",
+					"synonyms": [
+						"Pont Neuf Quai des Grands Augustins",
+						"Quai des Grands Augustins",
+						"Pont Neuf - Quai des Grands Augustins"
+					],
+					"id": "pont+neuf+++quai+des+grands+augustins"
+				},
+				{
+					"value": "Pont Neuf - Quai du Louvre",
+					"synonyms": [
+						"Pont Neuf Quai du Louvre",
+						"Quai du Louvre",
+						"Pont Neuf - Quai du Louvre"
+					],
+					"id": "pont+neuf+++quai+du+louvre"
+				},
+				{
+					"value": "Chatelet",
+					"synonyms": [
+						"Chatelet"
+					],
+					"id": "chatelet"
+				},
+				{
+					"value": "Mazarine",
+					"synonyms": [
+						"Mazarine"
+					],
+					"id": "mazarine"
+				},
+				{
+					"value": "Saint-Germain - Odeon",
+					"synonyms": [
+						"Odeon",
+						"Saint-Germain",
+						"Saint-Germain - Odeon"
+					],
+					"id": "saint+germain+++odeon"
+				},
+				{
+					"value": "Musée du Luxembourg",
+					"synonyms": [
+						"Musée du Luxembourg",
+						"Luxembourg"
+					],
+					"id": "musee+du+luxembourg"
+				},
+				{
+					"value": "Guynemer-Vavin",
+					"synonyms": [
+						"Guynemer",
+						"Guynemer-Vavin"
+					],
+					"id": "guynemer+vavin"
+				},
+				{
+					"value": "Brea - Notre-Dame-Des-Champs",
+					"synonyms": [
+						"Notre-Dame-Des-Champs",
+						"Brea - Notre-Dame-Des-Champs"
+					],
+					"id": "brea+++notre+dame+des+champs"
+				},
+				{
+					"value": "Vavin",
+					"synonyms": [
+						"Vavin"
+					],
+					"id": "vavin"
+				},
+				{
+					"value": "Place du 18 Juin 1940",
+					"synonyms": [
+						"Place du 18 Juin 1940"
+					],
+					"id": "place+du+18+juin+1940"
+				},
+				{
+					"value": "Place du 18 Juin 1940 - Rue du Départ",
+					"synonyms": [
+						"Rue du Départ",
+						"Place du 18 Juin 1940 - Rue du Depart"
+					],
+					"id": "place+du+18+juin+1940+++rue+du+depart"
+				},
+				{
+					"value": "Gare Montparnasse",
+					"synonyms": [
+						"Montparnasse",
+						"Gare Montparnasse"
+					],
+					"id": "gare+montparnasse"
+				},
+				{
+					"value": "Gaite",
+					"synonyms": [
+						"Gaite"
+					],
+					"id": "gaite"
+				},
+				{
+					"value": "Losserand - Maine",
+					"synonyms": [
+						"Maine",
+						"Losserand",
+						"Losserand - Maine"
+					],
+					"id": "losserand+++maine"
+				},
+				{
+					"value": "Chateau - Mairie du 14e",
+					"synonyms": [
+						"Chateau",
+						"Chateau - Mairie du 14e"
+					],
+					"id": "chateau+++mairie+du+14e"
+				},
+				{
+					"value": "Rue Benard",
+					"synonyms": [
+						"Benard",
+						"Rue Benard"
+					],
+					"id": "rue+benard"
+				},
+				{
+					"value": "Alesia - les Plantes",
+					"synonyms": [
+						"les Plantes",
+						"Alesia - les Plantes"
+					],
+					"id": "alesia+++les+plantes"
+				},
+				{
+					"value": "Hopital Notre-Dame de Bon Secours - Antoine Chantin",
+					"synonyms": [
+						"Antoine Chantin",
+						"Hopital Notre-Dame de Bon Secours",
+						"Notre-Dame de Bon Secours",
+						"Hop. Notre-Dame de Bon Secours - A. Chantin"
+					],
+					"id": "hop.+notre+dame+de+bon+secours+++a.+chantin"
+				},
+				{
+					"value": "Jean Moulin",
+					"synonyms": [
+						"Jean Moulin"
+					],
+					"id": "jean+moulin"
+				},
+				{
+					"value": "Porte de Chatillon",
+					"synonyms": [
+						"Porte de Chatillon"
+					],
+					"id": "porte+de+chatillon"
+				},
+				{
+					"value": "Porte Didot - Lycee Raspail",
+					"synonyms": [
+						"Porte Didot - Lycee Raspail"
+					],
+					"id": "porte+didot+++lycee+raspail"
+				},
+				{
+					"value": "Porte de Vanves",
+					"synonyms": [
+						"Porte de Vanves"
+					],
+					"id": "porte+de+vanves"
+				},
+				{
+					"value": "Pont de la Vallee",
+					"synonyms": [
+						"Pont de la Vallee"
+					],
+					"id": "pont+de+la+vallee"
+				},
+				{
+					"value": "Jean Jaures-Jean Bleuzen",
+					"synonyms": [
+						"Jean Jaures-Jean Bleuzen"
+					],
+					"id": "jean+jaures+jean+bleuzen"
+				},
+				{
+					"value": "Carrefour Albert Legris",
+					"synonyms": [
+						"Carrefour Albert Legris"
+					],
+					"id": "carrefour+albert+legris"
+				},
+				{
+					"value": "Vanves-Lycee Michelet",
+					"synonyms": [
+						"Vanves-Lycee Michelet"
+					],
+					"id": "vanves+lycee+michelet"
+				},
+				{
+					"value": "Colonel Monteil",
+					"synonyms": [
+						"Colonel Monteil"
+					],
+					"id": "colonel+monteil"
+				},
+				{
+					"value": "Didot",
+					"synonyms": [
+						"Didot"
+					],
+					"id": "didot"
+				},
+				{
+					"value": "Saint-Andre des Arts",
+					"synonyms": [
+						"Saint-Andre des Arts"
+					],
+					"id": "saint+andre+des+arts"
+				},
+				{
+					"value": "Alesia - Didot",
+					"synonyms": [
+						"Alesia - Didot"
+					],
+					"id": "alesia+++didot"
+				},
+				{
+					"value": "Pernety",
+					"synonyms": [
+						"Pernety"
+					],
+					"id": "pernety"
+				},
+				{
+					"value": "Chateau",
+					"synonyms": [
+						"Chateau"
+					],
+					"id": "chateau"
+				},
+				{
+					"value": "Notre-Dame-Des-Champs",
+					"synonyms": [
+						"Notre-Dame-Des-Champs"
+					],
+					"id": "notre+dame+des+champs"
+				},
+				{
+					"value": "Raspail - Fleurus",
+					"synonyms": [
+						"Raspail - Fleurus"
+					],
+					"id": "raspail+++fleurus"
+				},
+				{
+					"value": "Fleurus",
+					"synonyms": [
+						"Fleurus"
+					],
+					"id": "fleurus"
+				},
+				{
+					"value": "Senat",
+					"synonyms": [
+						"Senat"
+					],
+					"id": "senat"
+				},
+				{
+					"value": "Theatre de l'Odeon",
+					"synonyms": [
+						"Theatre de l'Odeon"
+					],
+					"id": "theatre+de+l'odeon"
+				}
+			]
+		}
+	],
+	"intents": [
+		{
+			"name": "HorairesIntent",
+			"phrases": [
+				"donne moi les horaires à l'arrêt {station}",
+				"donne moi les horaires à la station {station}",
+				"donne moi les horaires station {station}",
+				"donne moi les horaires arrêt {station}",
+				"quand arrive le bus à l'arrêt {station}",
+				"quand arrive le bus à la station {station}",
+				"quand arrive le bus station {station}",
+				"quand arrive le bus arrêt {station}",
+				"c'est quand le prochain passage à l'arrêt {station}",
+				"c'est quand le prochain passage à la station {station}",
+				"c'est quand le prochain passage station {station}",
+				"c'est quand le prochain passage arrêt {station}"
+			],
+			"inputs": [
+				{
+					"name": "station",
+					"type": "station",
+					"alexa": {
+						"samples": [
+							"arrêt {station}"
+						]
+					}
+				}
+			]
+		}
+	]
+}
