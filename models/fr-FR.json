@@ -8,6 +8,10 @@
 					"variations": [
 						{
 							"type": "PlainText",
+							"value": "quelle station s'il vous plait?"
+						},
+						{
+							"type": "PlainText",
 							"value": "quel arrêt s'il vous plait?"
 						}
 					]
@@ -36,15 +40,24 @@
 				"intents": [
 					{
 						"name": "AMAZON.CancelIntent",
-						"samples": []
+						"samples": [
+							"laisse tomber",
+							"annule"
+						]
 					},
 					{
 						"name": "AMAZON.HelpIntent",
-						"samples": []
+						"samples": [
+							"help",
+							"aide moi"
+						]
 					},
 					{
 						"name": "AMAZON.StopIntent",
-						"samples": []
+						"samples": [
+							"arrête",
+							"stop"
+						]
 					},
 					{
 						"name": "AMAZON.PauseIntent",
@@ -65,7 +78,25 @@
 					},
 					{
 						"name": "AMAZON.NavigateHomeIntent",
-						"samples": []
+						"samples": [
+							"départ",
+							"revient au point de départ",
+							"revient au départ"
+						]
+					},
+					{
+						"name": "AMAZON.NoIntent",
+						"samples": [
+							"no",
+							"non"
+						]
+					},
+					{
+						"name": "AMAZON.YesIntent",
+						"samples": [
+							"yes",
+							"oui"
+						]
 					}
 				]
 			}
@@ -388,6 +419,8 @@
 					"type": "station",
 					"alexa": {
 						"samples": [
+							"{station}",
+							"station {station}",
 							"arrêt {station}"
 						]
 					}

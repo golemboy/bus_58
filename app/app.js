@@ -14,6 +14,10 @@ const config = {
 
     intentMap: {
         'AMAZON.RepeatIntent': 'RepeatIntent',
+        'AMAZON.CancelIntent': 'CancelIntent',
+        'AMAZON.HelpIntent': 'HelpIntent',
+        'AMAZON.StopIntent': 'StopIntent',
+        'AMAZON.NavigateHomeIntent': 'NavigateHomeIntent',
     },
 
     db: {
@@ -32,8 +36,21 @@ const app = new App(config);
 
 app.setHandler({
     'LAUNCH': function() {
-        this.ask('Voulez vous avoir les horaires ?');
+        this.ask('Quelle station souhaitez vous connaitre les horaires de passage ?');
 
+    },
+    'CancelIntent': function()  {
+        this.tell('Merci pour votre recherche et à bientôt.')
+    },
+    'StopIntent': function()  {
+        this.tell('Merci pour votre recherche et à bientôt.')
+    },
+    'HelpIntent': function()  {
+        this.tell('Demandez moi un horaire de passage pour une station de la ligne.')
+        this.toIntent('LAUNCH')
+    },
+    'NavigateHomeIntent': function()  {
+        this.toIntent('LAUNCH')
     },
 
     'RepeatIntent': function()  {
