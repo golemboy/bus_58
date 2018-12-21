@@ -20,6 +20,7 @@ jovo build --reverse
 #en local
 jovo build --stage local
 jovo deploy --stage local
+jovo run --stage local
 
 #sur AWS
 jovo build --stage dev

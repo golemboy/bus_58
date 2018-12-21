@@ -22,6 +22,7 @@
 					{
 						"name": "HorairesIntent",
 						"confirmationRequired": false,
+						"prompts": {},
 						"slots": [
 							{
 								"name": "station",
@@ -150,7 +151,6 @@
 				{
 					"value": "Saint-Germain - Odeon",
 					"synonyms": [
-						"Odeon",
 						"Saint-Germain",
 						"Saint-Germain - Odeon"
 					],
@@ -175,7 +175,8 @@
 				{
 					"value": "Brea - Notre-Dame-Des-Champs",
 					"synonyms": [
-						"Notre-Dame-Des-Champs",
+						"Bréa",
+						"Brea",
 						"Brea - Notre-Dame-Des-Champs"
 					],
 					"id": "brea+++notre+dame+des+champs"
@@ -190,6 +191,9 @@
 				{
 					"value": "Place du 18 Juin 1940",
 					"synonyms": [
+						"dix huit juin mille neuf cent quarante",
+						"mille neuf cent quarante",
+						"dix huit juin",
 						"Place du 18 Juin 1940"
 					],
 					"id": "place+du+18+juin+1940"
@@ -213,6 +217,7 @@
 				{
 					"value": "Gaite",
 					"synonyms": [
+						"gaité",
 						"Gaite"
 					],
 					"id": "gaite"
@@ -229,7 +234,8 @@
 				{
 					"value": "Chateau - Mairie du 14e",
 					"synonyms": [
-						"Chateau",
+						"Chateau - Mairie du quatorzième",
+						"marie du quatorzième",
 						"Chateau - Mairie du 14e"
 					],
 					"id": "chateau+++mairie+du+14e"
@@ -237,6 +243,7 @@
 				{
 					"value": "Rue Benard",
 					"synonyms": [
+						"Bénard",
 						"Benard",
 						"Rue Benard"
 					],
@@ -277,6 +284,8 @@
 				{
 					"value": "Porte Didot - Lycee Raspail",
 					"synonyms": [
+						"Lycee Raspail",
+						"Porte Didot",
 						"Porte Didot - Lycee Raspail"
 					],
 					"id": "porte+didot+++lycee+raspail"
@@ -298,6 +307,8 @@
 				{
 					"value": "Jean Jaures-Jean Bleuzen",
 					"synonyms": [
+						"Jean Bleuzen",
+						"Jean Jaures",
 						"Jean Jaures-Jean Bleuzen"
 					],
 					"id": "jean+jaures+jean+bleuzen"
@@ -305,6 +316,7 @@
 				{
 					"value": "Carrefour Albert Legris",
 					"synonyms": [
+						"Albert Legris",
 						"Carrefour Albert Legris"
 					],
 					"id": "carrefour+albert+legris"
@@ -312,6 +324,7 @@
 				{
 					"value": "Vanves-Lycee Michelet",
 					"synonyms": [
+						"Lycee Michelet",
 						"Vanves-Lycee Michelet"
 					],
 					"id": "vanves+lycee+michelet"
@@ -382,6 +395,7 @@
 				{
 					"value": "Senat",
 					"synonyms": [
+						"Sénat",
 						"Senat"
 					],
 					"id": "senat"
@@ -389,6 +403,8 @@
 				{
 					"value": "Theatre de l'Odeon",
 					"synonyms": [
+						"Odéon",
+						"Odeon",
 						"Theatre de l'Odeon"
 					],
 					"id": "theatre+de+l'odeon"
@@ -411,7 +427,10 @@
 				"c'est quand le prochain passage à l'arrêt {station}",
 				"c'est quand le prochain passage à la station {station}",
 				"c'est quand le prochain passage station {station}",
-				"c'est quand le prochain passage arrêt {station}"
+				"c'est quand le prochain passage arrêt {station}",
+				"station {station}",
+				"arrêt {station}",
+				"{station}"
 			],
 			"inputs": [
 				{

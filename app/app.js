@@ -18,6 +18,8 @@ const config = {
         'AMAZON.HelpIntent': 'HelpIntent',
         'AMAZON.StopIntent': 'StopIntent',
         'AMAZON.NavigateHomeIntent': 'NavigateHomeIntent',
+        'AMAZON.YesIntent': 'YesIntent',
+        'AMAZON.NoIntent': 'NoIntent',
     },
 
     db: {
@@ -36,7 +38,7 @@ const app = new App(config);
 
 app.setHandler({
     'LAUNCH': function() {
-        this.ask('Quelle station souhaitez vous connaitre les horaires de passage ?');
+        this.ask('Pour quelle station souhaitez-vous connaître les horaires de passage ?');
 
     },
     'CancelIntent': function()  {
@@ -46,10 +48,10 @@ app.setHandler({
         this.tell('Merci pour votre recherche et à bientôt.')
     },
     'HelpIntent': function()  {
-        this.tell('Demandez moi un horaire de passage pour une station de la ligne.')
-        this.toIntent('LAUNCH')
+        this.ask('Pouvez vous m\'indiquer le nom de la station dont vous souhaitez connaitre les horaires de passage de la ligne ?');
+        
     },
-    'NavigateHomeIntent': function()  {
+    'NavigateHomeIntent': function()  { 
         this.toIntent('LAUNCH')
     },
 
@@ -66,22 +68,11 @@ app.setHandler({
             this.toIntent('LAUNCH');
         }
     },
-
-    'HorairesIntent': function(type, code, station) {
-        if (!this.alexaSkill().isDialogCompleted()) {
-            this.alexaSkill().dialogDelegate()
-            
-        } else if (this.alexaSkill().getIntentConfirmationStatus() !== 'CONFIRMED') {
-            
-            let la_station = station.alexaSkill.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-
-            this.alexaSkill().dialogConfirmIntent(
-                'Vous recherchez les horaires du bus 58' +
-                ' station ' + la_station +
-                 ' ?'
-            );
-        
-        } else if (this.alexaSkill().getIntentConfirmationStatus() === 'CONFIRMED') {
+    //'ConfirmState' : {
+/*
+        'YesIntent' : function(station) {
+            console.log('...yes...')
+            //console.log(station)
             let HorairesData = {
                 type: 'bus',
                 code: '58',
@@ -89,7 +80,47 @@ app.setHandler({
                 error: true                
             };
             this.toIntent('HorairesApiIntent', HorairesData);
+        },
+        */
+
+        'NoIntent' : function() {
+            this.toIntent('LAUNCH');
+        },
+
+    //},
+
+    'HorairesIntent': function(station) {
+        console.log(station)
+        console.log(this.alexaSkill().getIntentConfirmationStatus())
+        if (!this.alexaSkill().isDialogCompleted()) {
+            this.alexaSkill().dialogDelegate()
         }
+        else {
+            switch (this.alexaSkill().getIntentConfirmationStatus()) {               
+                case 'DENIED': //réponse non
+                    this.toIntent('LAUNCH');
+                    break;
+                case 'CONFIRMED': //réponse oui 
+                    let HorairesData = {
+                        type: 'bus',
+                        code: '58',
+                        station: station,
+                        error: true                
+                    };
+                    this.toIntent('HorairesApiIntent', HorairesData);
+                    break;
+                default:
+                    let la_station = station.alexaSkill.resolutions.resolutionsPerAuthority[0].values[0].value.name;
+                    
+                    let speech = 'Vous recherchez les horaires de passage du bus 58 station '+la_station+' ?';
+                    let reprompt = "Veuillez répondre par oui ou non s'il vous plait.";
+
+                    this.alexaSkill().dialogConfirmIntent(speech,reprompt)
+                    break;
+            }
+        }
+        
+        
     },
     'HorairesApiIntent': function(HorairesData) {
         let type = 'bus'
