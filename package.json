@@ -1,11 +1,11 @@
 {
-  "name": "jovo-sample-voice-app-nodejs",
-  "version": "1.0.0",
-  "description": "A sample voice app that works with the Jovo framework",
+  "name": "bus_58",
+  "version": "1.0.1",
+  "description": "Skill Alexa Bus 58",
   "main": "index.js",
   "dependencies": {
-    "aws-sdk": "^2.325.0",
-    "jovo-framework": "^1.4.10"
+    "aws-sdk": "^2.573.0",
+    "jovo-framework": "^2.2.23"
   },
   "devDependencies": {},
   "scripts": {
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jovotech/jovo-sample-voice-app-nodejs.git"
+    "url": "git+https://github.com/golemboy/bus_58.git"
   },
   "author": "Jovo",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/jovotech/jovo-sample-voice-app-nodejs/issues"
+    "url": "https://github.com/golemboy/bus_58/issues"
   },
-  "homepage": "https://github.com/jovotech/jovo-sample-voice-app-nodejs#readme"
+  "homepage": "https://github.com/golemboy/bus_58#readme"
 }
