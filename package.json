@@ -4,7 +4,7 @@
   "description": "Skill Alexa Bus 58",
   "main": "index.js",
   "dependencies": {
-    "aws-sdk": "^2.596.0",
+    "aws-sdk": "^2.814.0",
     "jovo-framework": "^2.2.25"
   },
   "devDependencies": {},
